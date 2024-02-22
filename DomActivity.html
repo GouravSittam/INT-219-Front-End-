@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Activity</title>
+</head>
+<body>
+    <p id="para" style="display: block;"></p>
+    <button onclick="disappear()">Click to change</button>
+
+    <script>
+        let p= document.getElementById('para');
+        p.innerText="This is a paragraph.";
+        document.body.appendChild(p);
+        function disappear(){
+            console.log(p.style.display);
+            if(p.style.display == "block"){
+                p.style.display= "none";
+            }
+            else{
+                p.style.display= "block";
+            }
+            
+        }
+    </script>
+</body>
+</html>

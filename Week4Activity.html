@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Dynamodive</title>
+</head>
+<body>
+    <h1 id="para">Welcome to Lovely Professional University</h1>
+    <img src="tree.jpg" height="400px" width="400px" alt="" id="img1">
+    <button onclick="disappear()">PRESS ME</button>
+
+    <script>
+        document.body.style.backgroundColor = 'lightblue';
+        let h1=document.createElement('h1')
+        h1.innerText="I CREATED THIS ONE"
+        document.body.appendChild(h1)
+        let img= document.getElementById('img1');
+        // p.innerText="Welcome to LPU";k
+        document.body.appendChild(img);
+        function disappear(){
+            console.log(img.style.display);
+            if(img.style.display == "block"){
+                img.style.display= "none";
+            }
+            else{
+                img.style.display= "block";
+            }
+            
+        }
+
+        let p = document.getElementById("para");
+        p.innerText = "Welcome to LPU";
+        document.body.appendChild(p);
+
+        
+    </script>
+</body>
+</html>

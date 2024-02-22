@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(238, 247, 241);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero {
+    background-image: url("black2.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+    resize: both;
+    
+}
+
+.heading {
+    display: flex;
+    column-gap: 3rem;
+    margin-left: 25rem;
+}
+
+.subHeading {
+    /* margin-left: 0rem; */
+    padding-top: 2rem;
+}
+
+.heading img {
+    width: 10rem;
+    height: 7rem;
+    margin-top: 2.5rem;
+}
+
+.writing {
+    display: flex;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.writing p {
+    font-size: x-large;
+}
+
+.btn {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 10px;
+    padding-left: 8px;
+}
+
+.svg {
+    color: rgb(0, 255, 94);
+}
+
+.container {
+    margin-top: 2rem;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    width: 100%; 
+}
+
+.innerBox {
+    display: flex;
+    flex-direction: column; 
+}
+
+.innerBox h1 {
+    font-size: 60px; 
+}
+
+.content h2 {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto; 
+    }
+
+    .heading {
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 0; 
+    }
+
+    .subHeading {
+        margin-left: 0; 
+        text-align: center; 
+        padding-top: 1rem; 
+    }
+
+    .writing {
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 0.5rem; 
+        margin-left: 0; 
+    }
+
+    .writing p {
+        text-align: center; 
+        font-size: large; 
+    }
+
+    .container {
+        width: 100%; 
+        padding: 0 1rem; 
+        box-sizing: border-box; 
+    }
+
+    .box {
+        width: 100%; 
+        padding: 0.5rem; 
+        box-sizing: border-box; 
+    }
+
+    .innerBox h1 {
+        font-size: 40px; 
+        text-align: center; 
+        margin-bottom: 1rem; 
+    }
+}

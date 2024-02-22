@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+        function stu(name,roll,marks)
+        {
+            this.name=name;
+            this.roll=roll;
+            this.marks=marks;
+        }
+        let students=new stu("reha",19,50);
+        console.log(students.name);
+        console.log(students.roll);
+        console.log(students.marks);
+        let student1=new stu("akash",20,55);
+        console.log(student1.name);
+        console.log(student1.roll);
+        console.log(student1.marks);
+        let student2=new stu("Dev",21,51);
+        console.log(student2.name+" roll no is "+student2.roll+" and the age is "+student2.marks);
+
+
+    </script>
+</body>
+</html>

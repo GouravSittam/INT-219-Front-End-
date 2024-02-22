@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.hero{
+    background-image: url("peakpx.jpg");
+    /* background-color: goldenrod; */
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    height: 35rem;
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: auto;
+}
+.heading{
+    display: flex;
+    
+}
+.subHeading{
+    margin-left: 2rem;
+    padding-top: 2rem;
+}
+
+.heading img{
+    width: 7rem;
+    height: 4rem;
+    margin-top: 1.5rem;
+}
+
+.writing{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.btn{
+    /* padding: 20px 60px; */
+background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  
+    border-radius: 10px;
+    padding-left: 8px;
+}
+.svg{
+    color: rgb(0, 255, 94);
+}
+.container{
+    margin-top: 2rem;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 2px solid yellow; */
+    display: grid;
+}
+
+.box{
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    
+}
+
+.innerBox{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    /* margin-right: ; */
+}
+
+.innerBox h1{
+    font-size: 100px;
+}
+
+.content h2{
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+

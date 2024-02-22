@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <p class="p1">WELCOME</p>
+    <p class="p1">TO</p>
+    <p class="p1" id="p2">HP</p>
+    <script>
+        var a=document.getElementById("p2");
+        a.innerText="HIMACHAL PRADESH";
+        var ele=document.getElementsByClassName("p1");
+        // for(i=0;i<ele.length;i++){
+        //     ele[i].innerText="Hello";
+        // }
+        var b=document.querySelector('p1');
+        b.innerText="SWAGATE"
+    </script>
+</body>
+</html>

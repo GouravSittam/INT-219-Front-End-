@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+    .slider-container {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 10px;
+    }
+    .slider-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="slider-container">
+        <img src="tree.jpg" height="500px" width="500px">
+        <img src="nature.jpg" height="500px" width="500px">
+        <img src="home.jpg" height="500px" width="500px">
+    </div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slider-container img');
+    const totalSlides = slides.length;
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+    setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>

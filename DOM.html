@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //creating paragraph
+        // var para = document.createElement('p');
+        // para.textContent = "LPU";
+        // document.body.appendChild(para);
+    
+        // //creating paragraph using shortcut of createTextNode
+        // let para2 = document.createTextNode("This is created using createElementNode");
+        // document.body.appendChild(para2);
+    
+        //creating div
+        let div = document.createElement('div');
+        let h1 = document.createElement('h1');
+        // let h1 = document.createElement('h1');
+        h1.innerText= "WELCOME TO LPU";
+        h1.style.textAlign = "center";
+        h1.style.margin = "auto";
+        div.style.backgroundColor= "aqua";
+        div.appendChild(h1);
+        document.body.appendChild(div);
+        document.body.style.margin= "auto"
+    
+        //creating main Section
+        let mainDiv = document.createElement('div');
+        let leftDiv = document.createElement('div');
+        let rightDiv = document.createElement('div');
+        mainDiv.appendChild(leftDiv);
+        mainDiv.appendChild(rightDiv);
+        mainDiv.style.height= "80vh";
+        mainDiv.style.display= "flex";
+        document.body.appendChild(mainDiv);
+    
+        let img = document.createElement('img');
+        img.src = 'nature.jpg';
+        img.style.width="100%";
+        img.style.height="100%";
+        leftDiv.appendChild(img);
+    
+        let para3 = document.createTextNode('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error optio obcaecati rem quam ullam a labem ipsum dolor, sit amet consectetur adipisicing elit. Error optio obcaecati rem quam ullam a labore eveniet magni. Dicta itaque nulem ipsum dolor, sit amet consectetur adipisicing elit. Error optio obcaecati rem quam ullam a labore eveniet magni. Dicta itaque nulore eveniet magni. Dicta itaque nulla quidem minima distinctio a hic quo deserunt odit cupiditate! Fuga odit ducimus quod doloribus ex ipsam non? Velit repellat libero, excepturi iusto, iste consequatur quia voluptatum minima recusandae sequi perferendis aperiam nemo? Facilis dolorem nobis ducimus maxime. Quasi, ex! Hic accusamus eaque error modi eligendi odit facere sapiente, distinctio, animi unde ut eos illum officiis. Dignissimos est, nemo labore a quo sunt fuga sed sequi. Eius, et, vitae assumenda minus fugiat voluptas expedita deleniti, saepe minima earum porro molestiae.');
+        
+
+        rightDiv.appendChild(para3);
+
+        rightDiv.style.backgroundColor="yellow";
+        leftDiv.style.width="50%";
+        rightDiv.style.width="50%";
+
+        //Button
+        var btn = document.createElement("button")
+        btn.innerText="click here"
+        rightDiv.appendChild(btn)
+        btn.style.padding="5px 20px";
+        btn.style.fontSize="16px";
+
+        
+
+        btn.onclick=size
+        btn.onmouseover=changecolor
+
+        function changecolor(){
+            btn.style.backgroundColor="yellow"
+        }
+        function size(){
+            btn.style.transform="scale(1.5)"
+        }
+
+
+
+
+    
+        
+    
+    
+    
+        
+    </script>
+</body>
+
+</html>

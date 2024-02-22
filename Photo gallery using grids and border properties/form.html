@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form>
+        <hi>Sign Up</hi>
+        <label for="Name">Name</label>
+        <input type="text" placeholder="First name & Last name" id="name"><br>
+        <label for="Password">PassWord</label>
+        <input type="Password"><br>
+        <label for="Address">Address</label>
+        <textarea cols="25" rows="4"></textarea><br>
+        <label for="Email">Email:</label>
+        <input type="Email" id="Email"><br>
+        <label for="City">City</label>
+        <select  name="City" id="City">
+            <option value="select">select</option>
+            <option value="Goa">Goa</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kangra">Kangra</option>
+            <option value="Phagwara">Phagwara</option>
+        </select><br>
+        <label for="Gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female
+        <input type="radio" id="other" name="other" value="other"> Other <br>
+        <label for="Upload file">Upload file</label>
+        <input type="file" id="uploadFile"><br><br>
+
+        <button onclick="validate()">Submit</button>
+    </form>
+</body>
+</html>

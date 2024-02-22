@@ -1,0 +1,106 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+        }
+        body{
+            background-image: url(home.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            /* color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        div{
+            background-color: rgb(245, 245, 245, 0.788);
+            border-radius: 10px;
+            padding: 50px;
+            width: 400px;
+        }
+        input[type="name"], input[type="password"],input[type="text"],input[type="address"], select, textarea{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+        input[type="submit"], input[type="reset"]{
+            background-color: blanchedalmond;
+            color: white;
+            /* padding: 10px; */
+        }
+        input[type="submit"], input[type="reset"]:hover{
+            background-color: rgb(9, 15, 188);
+            transform: scale(1.10);
+            cursor: pointer;
+        }
+        button{
+
+    width: max-content;
+        cursor: pointer;
+        padding: .5rem 1.2rem;
+        border: none;
+        border-radius: 4px;
+         background-color: #0a156f;
+        color: white;
+        font-size: 1rem;
+        transition: all .3s ease;
+        }
+
+    button:hover{
+        background-color: maroon;
+    transition-duration: 850ms;
+    transition-timing-function: linear;
+    
+    }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <form action="#">
+        <h1> Sign Up</h1>
+        <label for="name">Name</label>
+        <input type="name" placeholder="First name & Last name" id="name"><br>
+        <label for="password">Password</label>
+        <input type="password" id="Password"><br>
+        <label for="address">Address</label>
+        <textarea name="text" id="address" cols="25" rows="6"></textarea><br><br>
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter your email" id="name"><br>
+        <label for="cities">Select City</label>
+        <select name="cities" id="cities">
+            <option value="Select">Select</option>
+            <option value="Nodia">NOIDA</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+        </select><br>
+        <label for="gender">Gender</label>
+        <input type="radio" value="male" id="" checked>Male
+        <input type="radio" value="female" id=" ">Female
+        <input type="radio" value="other" id=" ">other <br><br>
+        <label for="Upload">Upload File:</label>
+        <input type="file"><br><br>
+        <button type="submit">Submit</button>
+        <button>Reset</button>
+    </form>
+</div>
+</body>
+</html>

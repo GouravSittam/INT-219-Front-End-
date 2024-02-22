@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="clock" class="clock">00:00:00</div>
+  <button id="startBtn" class="btn">Start</button>
+  <button id="stopBtn" class="btn">Stop</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const clockElement = document.getElementById('clock');
+  const startButton = document.getElementById('startBtn');
+  const stopButton = document.getElementById('stopBtn');
+  let intervalId;
+
+  function updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  function startClock() {
+    updateTime();
+    intervalId = setInterval(updateTime, 1000);
+  }
+
+  function stopClock() {
+    clearInterval(intervalId);
+  }
+
+  startButton.addEventListener('click', startClock);
+  stopButton.addEventListener('click', stopClock);
+});
+</script>
+</body>
+</html>

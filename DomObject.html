@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Object Creation</title>
+  </head>
+  <body>
+    <h1>JavaScript Object Creation</h1>
+
+    <script>
+      let p1 = {
+        Name: "Grv",
+        Age: 21,
+        City: "Kangra",
+      };
+      let p2 = {
+        Name: "Avi",
+        Age: 20,
+        City: "Kathmandu",
+      };
+      let p3 = {
+        Name: "Avinash",
+        Age: 22,
+        City: "Patna",
+      };
+
+      let div = document.createElement("div");
+      let para1 = document.createElement("p");
+      let para2 = document.createElement("p");
+      let para3 = document.createElement("p");
+
+      let p1Text =
+        "Name: " + p1.Name + "<br>Age: " + p1.Age + "<br>City: " + p1.City;
+      let p2Text =
+        "Name: " + p2.Name + "<br>Age: " + p2.Age + "<br>City: " + p2.City;
+      let p3Text =
+        "Name: " + p3.Name + "<br>Age: " + p3.Age + "<br>City: " + p3.City;
+
+      para1.innerHTML= p1Text;
+      para2.innerHTML = p2Text;
+      para3.innerHTML = p3Text;
+
+      div.appendChild(para1);
+      div.appendChild(para2);
+      div.appendChild(para3);
+      document.body.appendChild(div);
+
+      
+    </script>
+  </body>
+</html>
