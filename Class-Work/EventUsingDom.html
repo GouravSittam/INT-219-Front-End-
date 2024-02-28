@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>addEvent-Listeners Topic</title>
-  <style>
-    #changeColor {
-      height: 500px;
-      width: 500px;
-      background-color: rgb(9, 1, 80);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListner</title>
+    <style>
+    #box{
+        background-color: red;;
+        height: 200px;
+        width: 300px;
+        border: 10px solid green ;
     }
-  </style>
+    </style>
 </head>
 <body>
-  <div id="changeColor" class="background"></div>
-  <script>
-    var div1 = document.getElementById('changeColor');
+    <div id="box">fcgvhbjn</div>
+    <script>
+        let a=document.getElementById("box");
+        a.addEventListener('mouseleave',backGround)
+        function backGround(){
+            a.style.backgroundColor='green';
+            //a.removeEventListener('mouseenter',border)
+        }
+        a.addEventListener('click',border);
 
-    function changeColorOnHover() {
-      div1.style.backgroundColor = 'red';
-      div1.style.border = "2px solid black";
-    }
-
-    
-    function removeChanges() {
-      div1.style.backgroundColor = 'yellow';
-      div1.style.border = "none";
-      div1.removeEventListener('click', changeColorOnHover);
-      div1.removeEventListener('mouseleave', removeChanges);
-    }
-    
-    div1.addEventListener('click', changeColorOnHover);
-    div1.addEventListener('mouseleave', removeChanges);
-  </script>
+        function border(){
+            a.style.border="10px dashed yellow";
+            a.removeEventListener('mouseleave' ,backGround);
+        }
+    </script>
 </body>
 </html>
