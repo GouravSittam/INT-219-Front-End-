@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addEvent-Listeners Topic</title>
+  <style>
+    #changeColor {
+      height: 500px;
+      width: 500px;
+      background-color: rgb(9, 1, 80);
+    }
+  </style>
+</head>
+<body>
+  <div id="changeColor" class="background"></div>
+  <script>
+    var div1 = document.getElementById('changeColor');
+
+    function changeColorOnHover() {
+      div1.style.backgroundColor = 'red';
+      div1.style.border = "2px solid black";
+    }
+
+    
+    function removeChanges() {
+      div1.style.backgroundColor = 'yellow';
+      div1.style.border = "none";
+      div1.removeEventListener('click', changeColorOnHover);
+      div1.removeEventListener('mouseleave', removeChanges);
+    }
+    
+    div1.addEventListener('click', changeColorOnHover);
+    div1.addEventListener('mouseleave', removeChanges);
+  </script>
+</body>
+</html>
