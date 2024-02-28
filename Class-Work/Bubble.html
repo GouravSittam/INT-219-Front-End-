@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble</title>
+    <title>Document</title>
+    <style>
+        div {
+            border: 5px solid rgb(45, 44, 78);
+            padding: 30px;
+        }
+    </style>
 </head>
 <body>
+    <div id="parent">
+    </div>
     <script>
+        var parentDiv = document.getElementById('parent');
+        var child1Div = document.createElement('div');
+        child1Div.setAttribute('id', 'child1');
+        var child2Div = document.createElement('div');
+        child2Div.setAttribute('id', 'child2');
+        child1Div.appendChild(child2Div);
+        parentDiv.appendChild(child1Div);
+
+        function par(){
+            parentDiv.style.border = "5px solid green";
+        }
+        function ch1(){
+            child1Div.style.border = "5px solid yellow";
+        }
+        function ch2(){
+            child2Div.style.border = "5px solid red";
+        }
         
+        parentDiv.addEventListener("click",par,true);
+        child1Div.addEventListener("click",ch1,true);
+        child2Div.addEventListener("click",ch2,true);
     </script>
 </body>
 </html>
