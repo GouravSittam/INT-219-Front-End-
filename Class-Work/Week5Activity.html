@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        #imgshow {
+            border: 3px solid black;
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer; /* Added cursor pointer to indicate clickable */
+        }
+    </style>
+</head>
+<body>
+    <div id="imgshow"></div>
+    <div id="imgarr" class="image-gallery">
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg" alt="Image 1">
+        <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Image 2">
+        <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg" alt="Image 3">
+    </div>
+    <script>
+        const imgShow = document.getElementById('imgshow');
+        const imgArr = document.getElementById('imgarr');
+        const images = imgArr.getElementsByTagName('img');
+    
+        function showImage(event) {
+            const imgSrc = event.target.src;
+            imgShow.style.backgroundImage = `url('${imgSrc}')`; // Corrected backticks for string interpolation
+        }
+    
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener('click', showImage);
+        }
+    </script>
+    
+</body>
+</html>
