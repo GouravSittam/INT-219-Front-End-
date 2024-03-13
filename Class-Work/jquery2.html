@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Introduction to JQuery</title>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <script>
-        $(function(){
-            alert("Hey!");
-        })
-        $(document).ready(function(){
-            alert("Done");
-        })
-    </script>
 
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+    <script>
+    $(document).ready(function(){
+    $("p").click(function(){
+    $(this).hide();
+  });
+});
+    </script>
 </body>
 </html>
