@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jquery</title>
+    <title>jquery selectors</title>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="d1">
+        <p id="p1">WELCOME</p>
+    </div>
     <script>
-        $(function(){
-            alert("Hey!");
-        })
         $(document).ready(function(){
-            alert("Done");
+            var a=$("#p1").html();
+            alert(a);
         })
     </script>
-
 </body>
 </html>
