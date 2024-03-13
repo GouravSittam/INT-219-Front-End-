@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery selector using CSS</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="d1">
+        <p id="p1">WELCOME</p>
+        <ul class="u">
+            <li>mango</li>
+            <li>apple</li>
+            <li>banana</li>
+            <li>mango</li>
+            <li>apple</li>
+            <li>banana</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#p1").css("color", "green");
+            $("#p1").css("font-size", "40px");
+            // $("body").css("backgroundColor","blue");
+            $('.u').css( 'listStyle', 'circle' );
+            // $('.u').css( 'marginLeft','50px'); 
+            $('.u').css("backgroundColor","red"); 
+            $(".u").css("font-size", "20px");
+
+            $("ul li:even").css("color","blue")
+            $("ul li:odd").css("border","5px solid green")
+            var a=$("#d1").html();
+            console.log(a);
+
+        })
+    </script>
+</body>
+</html>
