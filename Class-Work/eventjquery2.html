@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery using mouse over</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<!-- <button id="click-me">Click Me</button> -->
+<div id="d1">
+    <p id="p1">Mera pe apna Mouse lekr ayo tumhe magic batyu</p>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $("#p1").mouseover(function(){
+        $("#p1").css("background-color","green");
+        $("#p1").text("kaisa laga ji?");
+    });
+});
+</script>
+
+</body>
+</html>
