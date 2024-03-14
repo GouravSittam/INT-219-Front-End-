@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cahnge text using jquery</title>
+    <title>Chnage elements in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
 </head>
 <body>
+
+    
+        <p id="p1">????????????????</p>
+        <p id="p2">@@@@@ @@@@@ @@@@@</p>
+        <p id="p3">&&&&&&&&&</p>
+
+    <button id="b1">Text</button>
+    <button id="b2">Font</button>
+    <button id="b3">HTML</button>
+    <script>
+
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#p1").text("LOVELY PROFESSIONAL UNIVERSITY")
+            })
+
+            $("#b2").click(function(){
+                $("#p2").html("<i>India</i>")
+            })
+            $("#b3").click(function(){
+                $("#p3").html("<img src = home.jpg height=200px width=200px>")
+            }) 
+        })
+
+    </script>
     
 </body>
 </html>
