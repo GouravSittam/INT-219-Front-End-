@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Button Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<p id="para">$$$$$$$$$$$</p>
+<p id="para2">%%%%%%%%%%%%%%</p>
+<p id="para3">&&&&&&&&&&&&&&&&&&&&&&&&&&</p>
+
+<button id="changeColorButton">Change Color</button>
+<button id="changeTextButton">Change Text</button>
+<button id="changeHtmlButton">Change HTML</button>
+<button id="addPictureButton">Add Picture</button>
+<button id="addDarkMode">Dark Mode</button>
+<script>
+$(document).ready(function(){
+    $('#changeColorButton').click(function(){
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        $('#para').css('color', randomColor);
+        $(this).text('Color Changed!');
+    });
+
+    $('#changeTextButton').click(function(){
+        $("#para").text("Lovely Profesional University");
+        $(this).text('Text Changed!');
+    });
+
+    $('#changeHtmlButton').click(function(){
+        $("#para2").html("<i>India</i>");
+        $(this).text('HTML Changed!');
+    });
+
+    $('#addPictureButton').click(function(){
+        var imageUrl = "Untitledlpu.jpeg"; 
+        var $img = $('<img>').attr('src', imageUrl);
+        $('#para3').empty().append($img);
+        $(this).text('Picture Added!');
+    });
+
+    $('#para').hover(function(){dark-mode
+        $(this).text('Lovely Profesional University');
+    }, function(){
+        $(this).text('Lovely Professional University (LPU) is a private university located in Phagwara, Punjab, India. The university was established in 2005 by Lovely International Trust, under The Lovely Professional University Act, 2005 (Punjab Act 25 of 2005) and started operation in 2006. The University is affiliated with the University Grants Commission, the National Council for Teacher Education and the Council of Architecture and approved by the Pharmacy Council of India. It is also a member of the Association of Indian Universities (AIU). The law programs are recognized by the Bar Council of India. Times Higher Education World University Rankings 2022 ranked LPU in 1001–1200th. In India, the National Institutional Ranking Framework (NIRF) ranked Lovely Professional University 81st overall, and 62nd among universities. ');
+    });
+    $("#addDarkMode").click(function(){
+        $("body").toggleClass("dark-mode");
+    });
+});
+</script>
+
+</body>
+</html>

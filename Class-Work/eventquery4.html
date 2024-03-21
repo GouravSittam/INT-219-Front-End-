@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .dark_mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p>
+            @#$#@%#@%#@%#
+        </p>
+    </div>
+    <div id="d2">
+        <p>
+            @%$@%@%#@%#%#@%#%@#
+        </p>
+    </div>
+    <div id="d3">
+        <p>
+            ********************************************
+        </p>
+    </div>
+    <button id="b1">1st</button>
+    <button id="b2">2nd</button>
+    <button id="b3">Click For Image</button>
+    <button id="b4">Dark mode</button>
+    <button id="b5">Remove Dark mode</button>
+    <button id="b6">Change mode</button>
+    <script>
+        $(document).ready(function(){
+            $("*").css("font-size","20px")
+            $("#b1").click(function(){
+                $("#d1 p").html("<mark>Gourav Chaudhary</mark>")
+            })
+            $("#b2").click(function(){
+                $("#d2 p").html("<i>@gouravsittam</i>")
+            })
+            $("#b3").click(function(){
+                $("#d3").html("<img src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg' height='300' width='300' />")
+            })
+            $("#b4").click(function(){
+                $("body").addClass("dark_mode")
+            })
+            $("#b5").click(function(){
+                $("body").removeClass("dark_mode")
+            })
+            $("#b6").click(function(){
+                $("body").toggleClass("dark_mode")
+            })
+        })
+    </script>
+</body>
+</html>

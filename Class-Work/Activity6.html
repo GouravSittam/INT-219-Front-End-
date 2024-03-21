@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Junction Task 1</title>
+<style>
+  /* Initial styles */
+  #header {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+  }
+  #content {
+    padding: 20px;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Apply styling on header using jQuery
+  $('#header').css({
+    'background-color': 'rgb(200,100,100)',
+    'color': 'white',
+    'font-size': '24px',
+    'padding': '20px',
+    'border':'5px solid black',
+    'border-radius': '10px',
+  });
+
+  // Apply styling on content div using jQuery
+  $('#content').css({
+    'border': '5px solid black',
+    'border-radius': '10px',
+    'padding': '20px',
+    'margin-top': '20px'
+  });
+});
+
+
+$(document).ready(function(){
+  // Function to change background color on button click
+  $('#changeColorBtn').click(function(){                                                                        
+    $('body').css('background-color', $('#colorInput').val());
+  });
+  // Function to add a border on button click
+  $('#addBorderBtn').click(function(){
+    $('body').css('border', '5px solid red');
+    $('body').css('border-radius','10px')
+  });
+});
+
+
+</script>
+</head>
+<body>
+<div id="header">
+  <h1>RAM RAM</h1>
+</div>
+<div id="content">
+  <p>Hello this is Div for some content.</p>
+</div>
+
+<div>
+    <label for="colorInput">Enter Background Color:</label>
+    <input type="text" id="colorInput">
+    <button id="changeColorBtn">Change Color</button>
+  </div>
+  <div>
+    <button id="addBorderBtn">Add Border</button>
+  </div>
+</body>
+</html>

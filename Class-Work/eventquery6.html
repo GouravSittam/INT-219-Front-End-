@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Button Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<p id="para">$$$$$$$$$$$</p>
+<p id="para2">%%%%%%%%%%%%%%</p>
+<p id="para3">&&&&&&&&&&&&&&&&&&&&&&&&&&</p>
+
+<button id="changeColorButton">Change Color</button>
+<button id="changeTextButton">Change Text</button>
+<button id="changeHtmlButton">Change HTML</button>
+<button id="addPictureButton">Add Picture</button>
+<button id="addDarkMode">Dark Mode</button>
+<button id="remove">Remove</button>
+<button id="add">ADD-Heading</button>
+<button id="appendPara">Append Paragraph</button>
+
+<script>
+$(document).ready(function(){
+    $("#add").click(function(){
+        $("body").prepend("<h1>Lovely Profesional University</h1>");
+    });
+    
+    $('#changeColorButton').click(function(){
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        $('#para').css('color', randomColor);
+        $(this).text('Color Changed!');
+    });
+
+    $('#changeTextButton').click(function(){
+        $("#para").text("Lovely Profesional University");
+        $(this).text('Text Changed!');
+    });
+
+    $('#changeHtmlButton').click(function(){
+        $("#para2").html("<i>India</i>");
+        $(this).text('HTML Changed!');
+    });
+    
+    $('#addPictureButton').click(function(){
+        var imageUrl = "home.jpg"; 
+        var $img = $('<img>').attr('src', imageUrl);
+        $('#para3').empty().append($img);
+        $(this).text('Picture Added!');
+    });
+
+    $('#para').hover(function(){
+        $(this).toggleClass('dark-mode');
+    }, function(){
+        $(this).toggleClass('dark-mode');
+    });
+
+    $("#addDarkMode").click(function(){
+        $("body").toggleClass("dark-mode");
+    });
+
+    $("#remove").click(function(){
+        $("#para").empty();
+    });
+
+    $("#appendPara").click(function(){
+        $("body").append("<p>lorem10</p>");
+    });
+});
+</script>
+
+</body>
+</html>
