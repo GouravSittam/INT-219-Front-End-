@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum?</p>
+    <script>
+        var stud,a="",i;
+        stud={
+            "name":"Grv",
+            "cgpa":"7.7",
+            "courses":["html","css","js"]
+        };
+        for(i in stud.courses){
+            a += stud.courses[i]+ "<br>";
+        }
+        document.getElementById("demo").innerHTML = a;
+    </script>
+</body>
+</html>
