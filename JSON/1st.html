@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Json</title>
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 20px;
+            background-color: orange;
+            
+        }
+    </style>
 </head>
 <body>
-    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum?</p>
+    <div>
+        <p id="target">
+
+        </p>
+    </div>
     <script>
-        var stud,a="",i;
-        stud={
+        const stud = {
             "name":"Grv",
+            "class":"K22AZ",
             "cgpa":"7.7",
-            "courses":["html","css","js"]
-        };
-        for(i in stud.courses){
-            a += stud.courses[i]+ "<br>";
+            "department":"CSE",
+            "address":"HP",
+            "phone":9563478965,
+            "email":"grv@gmail.com",
+            "course":["HTML","CSS","JS"]
         }
-        document.getElementById("demo").innerHTML = a;
+        const stud2 ={
+            "name":"Grv Chaudhary",
+            "class":"K22AZ"
+        }
+        let a=""
+        for(i in stud.course){
+            a+=stud.course[i]+"<br>";
+        }
+        document.getElementById("target").innerHTML =a;
+         const abc = JSON.stringify(stud);
+        console.log(abc)
+        const cba = JSON.parse(abc);
+        console.log(cba)
     </script>
 </body>
 </html>

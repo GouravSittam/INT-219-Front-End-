@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore quasi quisquam, dolorem ipsam error doloremque quae? Numquam, culpa maxime.</p>
+    
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="b4">Dark mode</button>
+    
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#para").hide();
+            });
+
+            $("#show").click(function(){
+                $("#para").show();
+            });
+
+            $("#b4").click(function(){
+                $("body").addClass("dark-mode");
+            });
+
+            $("#toggle").click(function(){
+                $("body").toggleClass("dark-mode");
+            });
+        });
+    </script>
+</body>
+</html>

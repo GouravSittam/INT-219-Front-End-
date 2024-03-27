@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slideup & SlideDown & SlideToogle</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            #d1{
+                border: 2px solid orange ;
+                height: 300px;
+                width: 300px;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+            <img  src="home.jpg" alt="img">
+            
+        </div>
+        <button id="btn1">Show</button>
+        <button id="btn2">Hide</button>
+        <button id="btn3">toggle</button>
+        <button id="btn4">Slide Up</button>
+        <button id="btn5">Slide down</button>
+        <button id="btn6">Slide Toggle</button>
+    
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("img").show(2000);
+                })
+                $("#btn2").click(function(){
+                    $("img").hide(2000);
+                })
+                $("#btn3").click(function(){
+                    $("img").toggle(2000);
+                })
+                $("#btn4").click(function(){
+                    $("img").slideUp(2000);
+                })
+                $("#btn5").click(function(){
+                    $("img").slideDown(2000);
+                })
+                $("#btn6").click(function(){
+                    $("img").slideToggle(2000);
+                })
+            })
+        </script>
+    </body>
+    </html>
