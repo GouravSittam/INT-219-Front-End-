@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .container-fluid{
+            border: 5px solid red;
+        }
+        .row{
+            border: 3px solid rgb(25, 0, 255);
+        }
+        .col{
+            border: 2px solid green;
+        }
+    </style>
     <title>GRID</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">Col1</div>
+            <div class="col">Col2</div>
+            <div class="col">Col3</div>
+            <div class="col">Col4</div>
+        </div>
+        <div class="row">Row1</div>
+        <div class="row">Row2</div>
+        <div class="row">Row3</div>
+        <div class="row">Row4</div>
+    </div>
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
