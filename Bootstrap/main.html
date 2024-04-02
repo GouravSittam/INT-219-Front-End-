@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!email.includes('@') || !email.includes('.com')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+                return;
+            }
+
+            // If all validations pass, you can proceed with login logic here.
+            // For this example, let's just display a success message.
+            alert('Login successful!');
+        });
+    </script>
+</body>
+</html>
